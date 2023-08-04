@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DiaryController {
 
-    @GetMapping("/diaries")
+    private final String baseUrl = "/diaries";
+
+    @GetMapping(baseUrl)
     public String getList() {
         log.debug("get list");
         return "get list";
